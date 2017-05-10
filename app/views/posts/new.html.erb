@@ -1,0 +1,15 @@
+<header>
+    <h2>새 글 작성하기</h2>
+</header>
+
+
+<form action='/posts/create' method='POST'>
+    <label for="exampleTextarea">제목을 입력하세요</label>
+    <br>
+    <input type='text' name='post_title' placeholder='제목' class="form-control" rows='3'>
+    <br>
+     <label for="exampleTextarea">내용을 입력하세요</label>
+    <input type='text' name='post_content' placeholder='내용' class="form-control"  rows="3" >
+    <br>
+    <input type='submit' value = '작성하기' class="btn btn-info">
+</form>

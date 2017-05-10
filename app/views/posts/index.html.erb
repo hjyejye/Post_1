@@ -1,0 +1,36 @@
+<header>
+    <h1>성신여대<br>멋쟁이 사자처럼<br>공스타그램</h1>
+    <p>같이의 가치!스터디 공유!</p>
+    <P>멋쟁이 사자처럼활동을 하면서 어려웠던점, 나만의 공부방법, 도움이 되었던 자료들을 공유해서 다같이 공부하자!</P>
+    <button type="button" class="btn btn-outline-primary"><a href="/posts/new">작성하기</a></button>
+</header>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>제목</th>
+      <th>내용</th>
+      <th></th>
+    </tr>
+  </thead>
+  <% @posts.each do |p| %>
+  <tbody>
+    <tr>
+      <td><%= p.title %></td>
+      <td><%= p.content %></td>
+      <td><form action="/posts/destroy/<%=p.id%>" method="POST">
+        <input type="submit" value='삭제' class="btn btn-info">
+    </form></td>
+    </tr>
+  </tbody>
+  <%end%>
+</table>
+
+
+    
+    
+
+    
+
+
+    
